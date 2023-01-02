@@ -5,7 +5,7 @@ input = stdin.readline
 input()
 
 Xs = list(map(int,input().split()))
-Xssrt = sorted(list(set(sorted(Xs))))
+Xssrt = sorted(list(set(Xs)))
 
 dict = {}
 for i in range(len(Xssrt)):
