@@ -6,8 +6,7 @@ def recursion(s:str,depth:int):
     elif s[0] != s[-1]:
         return "0 " + str(depth)
     else:
-        depth += 1
-        return recursion(s[1:-1],depth)
+        return recursion(s[1:-1],depth+1)
 
 T = int(input())
 for _ in range(T):
