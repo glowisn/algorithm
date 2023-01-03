@@ -1,4 +1,6 @@
 #25501
+from sys import stdout
+print = stdout.write
 
 def recursion(s:str,depth:int):
     if len(s) == 1 or len(s) == 0:
@@ -11,3 +13,4 @@ def recursion(s:str,depth:int):
 T = int(input())
 for _ in range(T):
     print(recursion(input(),1))
+    print('\n')
