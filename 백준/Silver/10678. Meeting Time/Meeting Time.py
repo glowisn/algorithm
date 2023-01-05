@@ -1,16 +1,15 @@
 #10678
 bill = [[],[]]
 
-def travel(paths,start,N,who,time = 0,visited = []):
+def travel(paths,start,N,who,time = 0):
     if start == N:
         # Goal
         global bill
         bill[who].append(time)
         return
-    visited.append(start)
     
     for des, cost in paths[start].items():
-        travel(paths,des,N,who,time+cost[who],visited)
+        travel(paths,des,N,who,time+cost[who])
 
 N, M = map(int,input().split())
 paths = []
@@ -29,6 +28,5 @@ for cost in bill[0]:
     if cost in bill[1]:
         print(cost)
         quit()
-
 
 print("IMPOSSIBLE")
