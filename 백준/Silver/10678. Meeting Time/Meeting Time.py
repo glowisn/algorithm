@@ -1,7 +1,8 @@
 #10678
 bill = [[],[]]
 
-def travel(paths,start,N,who,time = 0):
+def travel(start,who,time = 0):
+    global paths, N
     if start == N:
         # Goal
         global bill
@@ -9,7 +10,7 @@ def travel(paths,start,N,who,time = 0):
         return
     
     for des, cost in paths[start].items():
-        travel(paths,des,N,who,time+cost[who])
+        travel(des,who,time+cost[who])
 
 N, M = map(int,input().split())
 paths = []
@@ -21,7 +22,7 @@ for i in range(M):
     paths[ta][tb] = [tc,td]
 
 for j in range(2):
-    travel(paths,1,N,j)
+    travel(1,j)
     bill[j].sort()
 
 for cost in bill[0]:
