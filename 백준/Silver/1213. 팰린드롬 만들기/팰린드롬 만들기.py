@@ -6,8 +6,6 @@ for _ in range(26):
 for al in name:
     alpcnt[ord(al) - 65] += 1
 
-# print(alpcnt)
-
 oddcnt = 0
 oddflag = -1
 for i in range(26):
@@ -19,10 +17,6 @@ for i in range(26):
         oddflag = i
         alpcnt[i] = alpcnt[i] - 1
     alpcnt[i] = alpcnt[i] // 2
-
-# print(oddcnt)
-# print(oddflag)
-# print(alpcnt)
 
 pel = []
 t = ''
@@ -36,6 +30,7 @@ for j in range(26):
 #print oddcnt if exist
 if oddflag != -1:
     print(chr(65 + oddflag),end='')
+
 
 pel.reverse()
 for p in pel:
