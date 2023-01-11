@@ -18,12 +18,10 @@ for _ in range(N):
 
 #Too small arguemnt
 if N < 3 or M < 3:
-    for i in range(N):
-        for j in range(M):
-            if a[i][j] != b[i][j]:
-                print(-1)
-                quit()
-    print(0)
+    if a == b:
+        print(0)
+    else:
+        print(-1)
     quit()
 
 cnt = 0
