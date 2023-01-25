@@ -1,6 +1,5 @@
 #17636
-def main():
-    n=int(input())
+def solution(n):
     l=[i*i for i in range(1,224)]
     for i in range(223):
         e1=l[i]
@@ -24,4 +23,4 @@ def main():
                     return 3
     return 4
 
-print(main())
+print(solution(int(input())))
