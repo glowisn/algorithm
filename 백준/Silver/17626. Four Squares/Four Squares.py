@@ -1,12 +1,27 @@
-#17626
-n = int(input())
-a = [0,1]
+#17636
+def main():
+    n=int(input())
+    l=[i*i for i in range(1,224)]
+    for i in range(223):
+        e1=l[i]
+        if e1==n:
+            return 1
 
-for i in range(2,n+1):
-    min_val = 1e9
-    j = 1
-    while (j**2) <= i:
-        min_val = min(min_val,a[i - (j**2)])
-        j += 1
-    a.append(min_val + 1)
-print(a[n])
+    for i1 in range(223):
+        e1=l[i1]
+        for i2 in range(i1,223):
+            e2=l[i2]
+            if e1+e2==n:
+                return 2
+                
+    for i1 in range(223):
+        e1=l[i1]
+        for i2 in range(i1,223):
+            e2=l[i2]
+            for i3 in range(i2,223):
+                e3=l[i3]
+                if e1+e2+e3==n:
+                    return 3
+    return 4
+
+print(main())
