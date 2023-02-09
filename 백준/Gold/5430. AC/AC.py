@@ -12,8 +12,6 @@ def printThat(arr):
     print(*arr,sep=',',end="]\n")
 
 def getArr(ipt:str):
-    if ipt == "[]":
-        return deque([])
     x = []
     t = ipt[1:-1]
     tmp = ""
