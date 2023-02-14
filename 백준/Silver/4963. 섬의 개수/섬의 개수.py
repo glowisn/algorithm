@@ -22,12 +22,12 @@ def bfs(graph,w,h):
     
     for node in nodes:
         if node not in visited:
+            visited.append(node)
             queue.append(node)
             cnt += 1
         
         while queue:
             x,y = queue.popleft()
-            visited.append((x,y))
 
             for i in range(8):
                 nx = x + dx[i]
