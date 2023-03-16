@@ -19,18 +19,18 @@ start,target = map(int,input().rsplit())
 
 def dijkstra(num):
     q = []
-    heapq.heappush(q,(num,0))
+    heapq.heappush(q,(0,num))
     distance[num] = 0
 
     while q:
-        x,d = heapq.heappop(q)
+        d,x = heapq.heappop(q)
         if distance[x] < d:
             continue
         for dx,dd in graph[x]:
             nd = d + dd
             if distance[dx] > nd:
                 distance[dx] = nd
-                heapq.heappush(q,(dx,nd))
+                heapq.heappush(q,(nd,dx))
 
 dijkstra(start)
 
