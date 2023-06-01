@@ -4,5 +4,5 @@ def solution(brown, yellow):
         h = i - 2
         w = r - i - 2
         if w * h == yellow:
-            return [w+2,h+2]
+            return [r-i,i]
     return []
