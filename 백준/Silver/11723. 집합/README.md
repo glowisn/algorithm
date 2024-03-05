@@ -4,11 +4,15 @@
 
 ### 성능 요약
 
-메모리: 30616 KB, 시간: 4048 ms
+메모리: 31120 KB, 시간: 4480 ms
 
 ### 분류
 
-비트마스킹(bitmask), 구현(implementation)
+비트마스킹, 구현
+
+### 제출 일자
+
+2024년 3월 6일 01:58:15
 
 ### 문제 설명
 
@@ -20,7 +24,7 @@
 	<li><code>check x</code>: S에 x가 있으면 1을, 없으면 0을 출력한다. (1 ≤ x ≤ 20)</li>
 	<li><code>toggle x</code>: S에 x가 있으면 x를 제거하고, 없으면 x를 추가한다. (1 ≤ x ≤ 20)</li>
 	<li><code>all</code>: S를 {1, 2, ..., 20} 으로 바꾼다.</li>
-	<li><code>empty</code>: S를 공집합으로 바꾼다. </li>
+	<li><code>empty</code>: S를 공집합으로 바꾼다.</li>
 </ul>
 
 ### 입력 

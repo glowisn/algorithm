@@ -1,28 +1,35 @@
-#11723
-from sys import stdin
-input = stdin.readline
+import sys
 
-s = set()
-dft = {i for i in range(1,21)}
-for _ in range(int(input())):
-    command = list(input().split())
-    match command[0]:
-        case "add":
-            s.add(int(command[1]))
-        case "remove":
-            try:
-                s.remove(int(command[1]))
-            except:
-                continue
-        case "check":
-            print(1) if int(command[1]) in s else print(0)
-        case "toggle":
-            try:
-                s.remove(int(command[1])) if int(command[1]) in s else s.add(int(command[1]))
-            except:
-                continue
-        case "all":
-            s = dft
-        case "empty":
-            s.clear()
+m = int(sys.stdin.readline())
 
+ms = set()
+
+def operate(s):
+    global ms
+    if (s[0] == 'add'):
+        ms.add(int(s[1]))
+    if (s[0] == 'remove'):
+        x = int(s[1])
+        if x in ms:
+            ms.remove(x)
+    if (s[0] == 'check'):
+        x = int(s[1])
+        if x in ms:
+            print(1)
+        else:
+            print(0)
+    if (s[0] == 'toggle'):
+        x = int(s[1])
+        if x in ms:
+            ms.remove(x)
+        else:
+            ms.add(x)
+    if (s[0] == 'all'):
+        ms = {i for i in range(1, 21)}
+    if (s[0] == 'empty'):
+        ms = set()
+
+
+for _ in range(m):
+  s = sys.stdin.readline().strip().split()
+  operate(s)
